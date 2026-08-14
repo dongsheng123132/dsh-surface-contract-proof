@@ -1,5 +1,10 @@
 # dsh-surface-contract-proof
 
+[![CI](https://github.com/dongsheng123132/dsh-surface-contract-proof/actions/workflows/ci.yml/badge.svg)](https://github.com/dongsheng123132/dsh-surface-contract-proof/actions/workflows/ci.yml)
+[![MIT license](https://img.shields.io/github/license/dongsheng123132/dsh-surface-contract-proof)](LICENSE)
+[![Node.js 22+](https://img.shields.io/badge/Node.js-%E2%89%A522-339933?logo=nodedotjs&logoColor=white)](package.json)
+[![Awesome DSH Plugins](https://img.shields.io/badge/Awesome_DSH-verified_lab-0969da)](https://github.com/dongsheng123132/awesome-dsh-plugins#2origin-plugin-lab)
+
 `dsh-surface-contract-proof` verifies that recorded DeepSeek Harness ToolRuntime, MCP JSON-RPC, and CLI JSON envelopes preserve one pinned semantic contract across a baseline and an observed revision.
 
 It reads explicit, SHA-256-pinned JSON fixtures. It does **not** execute the target, start arbitrary commands, call a network service, replay side effects, or implement an action core.
