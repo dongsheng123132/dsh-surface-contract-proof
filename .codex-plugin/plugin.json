@@ -1,0 +1,20 @@
+{
+  "name": "dsh-surface-contract-proof",
+  "version": "0.1.0",
+  "description": "Verify recorded ToolRuntime, MCP and CLI envelopes against one pinned semantic contract.",
+  "author": { "name": "2Origin", "url": "https://github.com/dongsheng123132" },
+  "homepage": "https://github.com/dongsheng123132/dsh-surface-contract-proof#readme",
+  "repository": "https://github.com/dongsheng123132/dsh-surface-contract-proof",
+  "license": "MIT",
+  "keywords": ["deepseek-harness", "contract", "mcp", "cli", "evidence"],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DSH Surface Contract Proof",
+    "shortDescription": "Prove ToolRuntime, MCP and CLI envelopes agree.",
+    "longDescription": "Compare pinned baseline and observed JSON fixtures from DSH ToolRuntime, MCP JSON-RPC and CLI JSON surfaces against one content-addressed semantic contract without executing the target.",
+    "developerName": "2Origin",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Audit"],
+    "defaultPrompt": ["Verify this DSH surface contract suite and show semantic drift."]
+  }
+}
