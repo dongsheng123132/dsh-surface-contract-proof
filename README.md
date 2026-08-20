@@ -7,6 +7,8 @@
 
 `dsh-surface-contract-proof` verifies that recorded DeepSeek Harness ToolRuntime, MCP JSON-RPC, and CLI JSON envelopes preserve one pinned semantic contract across a baseline and an observed revision.
 
+Version 0.2.0 removes the bundled DSH tool runtime and the default export that stock Cordis Loader misclassified. It exposes host-neutral tool definitions through its namespace export and is regression-tested through real local-path and fixed-commit stock Web profiles.
+
 It reads explicit, SHA-256-pinned JSON fixtures. It does **not** execute the target, start arbitrary commands, call a network service, replay side effects, or implement an action core.
 
 ## Complementary boundary
@@ -38,6 +40,8 @@ Use `inspect` to obtain canonical baseline digests, review them, then pin them a
 - `dsh_surface_contract_inspect`
 - `dsh_surface_contract_verify`
 - MCP aliases: `surface_contract_inspect`, `surface_contract_verify`
+
+The MCP surface is proof-only and in-memory: it accepts bounded inline manifest/fixture JSON, reads or writes no files, and returns no fixture bodies. DSH/CLI may write only a content-addressed report beneath an explicit workspace-relative `artifactDir`, with atomic read-back verification.
 
 ```bash
 dsh plugin --profile surface-contract add github:dongsheng123132/dsh-surface-contract-proof#<commit>
